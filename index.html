@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NPL Push Google Calendar</title>
+        <meta charset="utf-8" />
+        <script src="APIKEY.js" defer></script>
+        <script src="data.js" defer></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <p>NPL Push Google Calendar</p>
+
+        <button id="authorize_button" style="display: none">Authorize</button>
+        <button id="signout_button" style="display: none">Sign Out</button>
+
+        <pre id="content" style="white-space: pre-wrap"></pre>
+
+        <script
+            async
+            defer
+            src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()"
+        ></script>
+    </body>
+</html>
