@@ -4,7 +4,7 @@ var DISCOVERY_DOCS = [
 
 var SCOPES = "https://www.googleapis.com/auth/calendar";
 
-const testPrefix = "[Test]";
+const testPrefix = "[Test] ";
 
 var authorizeButton = document.getElementById("authorize_button");
 var signoutButton = document.getElementById("signout_button");
@@ -210,10 +210,10 @@ async function pushDayToCalendar(date, day, isTest = false) {
     }
 }
 
-async function test() {
+async function test(isTest = true) {
     for (var date in dateDayMap) {
         const day = dateDayMap[date];
-        await pushDayToCalendar(date, days[day], true);
+        await pushDayToCalendar(date, days[day], isTest);
         await sleep(1000);
         console.log(`Finished pushing day ${day} for ${date}`);
     }
