@@ -214,7 +214,7 @@ async function test(isTest = true) {
     for (var date in dateDayMap) {
         const day = dateDayMap[date];
         await pushDayToCalendar(date, days[day], isTest);
-        await sleep(1000);
+        await sleep(500);
         console.log(`Finished pushing day ${day} for ${date}`);
     }
 }
@@ -225,7 +225,7 @@ async function removeTestEvents() {
         let isTestEvent = event.summary.startsWith(testPrefix);
         if (isTestEvent || true) {
             await removeEventFromCalendar(event.id);
-            await sleep(1000);
+            // await sleep(1000);
         }
     }
     console.log("Cleared all test events");
