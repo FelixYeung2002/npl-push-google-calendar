@@ -94,7 +94,7 @@ days[1] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [14, 30],
+            startTime: [15, 30],
             timeLast: 40,
         }),
     ],
@@ -134,8 +134,13 @@ days[2] = new Day({
         }),
         new Lesson({
             subject: subjects["CHI"],
-            startTime: [14, 30],
-            timeLast: 150,
+            startTime: [15, 30],
+            timeLast: 40,
+        }),
+        new Lesson({
+            subject: subjects["CHI"],
+            startTime: [16, 10],
+            timeLast: 40,
         }),
     ],
 });
@@ -174,7 +179,7 @@ days[3] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [14, 30],
+            startTime: [15, 30],
             timeLast: 40,
         }),
     ],
@@ -214,8 +219,14 @@ days[4] = new Day({
         }),
         new Lesson({
             subject: subjects["CHEM"],
-            startTime: [14, 30],
-            timeLast: 150,
+            startTime: [15, 30],
+            timeLast: 40,
+        }),
+        ,
+        new Lesson({
+            subject: subjects["CHEM"],
+            startTime: [16, 10],
+            timeLast: 40,
         }),
     ],
 });
@@ -254,8 +265,14 @@ days[5] = new Day({
         }),
         new Lesson({
             subject: subjects["MAT"],
-            startTime: [14, 30],
-            timeLast: 150,
+            startTime: [15, 30],
+            timeLast: 40,
+        }),
+        ,
+        new Lesson({
+            subject: subjects["MAT"],
+            startTime: [16, 10],
+            timeLast: 40,
         }),
     ],
 });
@@ -294,7 +311,7 @@ days[6] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [14, 30],
+            startTime: [15, 30],
             timeLast: 40,
         }),
     ],
@@ -328,14 +345,20 @@ days[7] = new Day({
             timeLast: 40,
         }),
         new Lesson({
-            subject: subjects["ENG"],
+            subject: subjects["LS"],
             startTime: [12, 45],
             timeLast: 40,
         }),
         new Lesson({
             subject: subjects["ICT"],
-            startTime: [14, 30],
-            timeLast: 150,
+            startTime: [15, 30],
+            timeLast: 40,
+        }),
+        ,
+        new Lesson({
+            subject: subjects["ICT"],
+            startTime: [16, 10],
+            timeLast: 40,
         }),
     ],
 });
@@ -374,7 +397,7 @@ days[8] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [14, 30],
+            startTime: [15, 30],
             timeLast: 40,
         }),
     ],
@@ -414,8 +437,14 @@ days[9] = new Day({
         }),
         new Lesson({
             subject: subjects["PHY"],
-            startTime: [14, 30],
-            timeLast: 150,
+            startTime: [15, 30],
+            timeLast: 40,
+        }),
+        ,
+        new Lesson({
+            subject: subjects["PHY"],
+            startTime: [16, 10],
+            timeLast: 40,
         }),
     ],
 });
@@ -454,8 +483,14 @@ days[10] = new Day({
         }),
         new Lesson({
             subject: subjects["LS"],
-            startTime: [14, 30],
-            timeLast: 150,
+            startTime: [15, 30],
+            timeLast: 40,
+        }),
+        ,
+        new Lesson({
+            subject: subjects["LS"],
+            startTime: [16, 10],
+            timeLast: 40,
         }),
     ],
 });
