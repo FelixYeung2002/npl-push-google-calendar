@@ -36,8 +36,8 @@ function generateDates({ start, end, weekdayOnly, rejects = [], startDay }) {
 }
 
 let result = generateDates({
-    startDay: 1,
-    start: "2020-09-04",
+    startDay: 8,
+    start: "2020-09-29",
     end: "2020-10-31",
     rejects: [
         "2020-10-01",

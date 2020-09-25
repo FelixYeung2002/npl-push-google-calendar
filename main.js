@@ -223,7 +223,7 @@ async function removeTestEvents() {
     var events = await getAllEvents();
     for (var event of events) {
         let isTestEvent = event.summary.startsWith(testPrefix);
-        if (isTestEvent || true) {
+        if (isTestEvent) {
             await removeEventFromCalendar(event.id);
             // await sleep(1000);
         }
