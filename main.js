@@ -64,7 +64,29 @@ function appendPre(message) {
     pre.appendChild(textContent);
 }
 
-let pushToCalendar = (lesson, start, end, isTest = false) =>
+let pushWholeDayEventToCalendar = (title, start, end, isTest = true) =>
+    new Promise((resolve, reject) => {
+        var event = {
+            summary: isTest ? testPrefix + title : title,
+            description: title,
+            start: {
+                date: start,
+            },
+            end: {
+                date: end,
+            },
+        };
+
+        var request = gapi.client.calendar.events.insert({
+            calendarId: calendarId,
+            resource: event,
+        });
+
+        request.execute(function (response) {
+            resolve(true);
+        });
+    });
+let pushToCalendar = (lesson, start, end, isTest = true) =>
     new Promise((resolve, reject) => {
         var event = {
             summary: isTest ? testPrefix + lesson : lesson,
@@ -184,6 +206,15 @@ function removeEventFromCalendar(eventId) {
 }
 
 async function pushDayToCalendar(date, day, isTest = false) {
+    // let startDateTime = new Date(date);
+    // startDateTime.setHours(08, 20);
+    // let endDateTime = datePlusMin(startDateTime, 10);
+    await pushWholeDayEventToCalendar(`Day ${day}`, date, date, isTest);
+    await sleep(1000);
+    console.log(`Pushed day ${day} for ${date}`);
+}
+
+async function pushDayLessonsToCalendar(date, day, isTest = false) {
     for (var i in day.lessons) {
         const lesson = day.lessons[i];
         let startDateTime = new Date(date);
@@ -210,10 +241,20 @@ async function pushDayToCalendar(date, day, isTest = false) {
     }
 }
 
-async function test(isTest = true) {
+async function pushLessons(isTest = true) {
     for (var date in dateDayMap) {
         const day = dateDayMap[date];
-        await pushDayToCalendar(date, days[day], isTest);
+        await pushDayLessonsToCalendar(date, days[day], isTest);
+        await sleep(500);
+        console.log(`Finished pushing day ${day} for ${date}`);
+    }
+}
+
+async function pushDays(isTest = true) {
+    for (var date in dateDayMap) {
+        const day = dateDayMap[date];
+        // await pushDayLessonsToCalendar(date, days[day], isTest);
+        await pushDayToCalendar(date, day, isTest);
         await sleep(500);
         console.log(`Finished pushing day ${day} for ${date}`);
     }
