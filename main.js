@@ -260,11 +260,12 @@ async function pushDays(isTest = true) {
     }
 }
 
-async function removeTestEvents() {
+async function removeTestEvents(notTest = false) {
     var events = await getAllEvents();
+    events = events.filter((event) => event.start.dateTime);
     for (var event of events) {
         let isTestEvent = event.summary.startsWith(testPrefix);
-        if (isTestEvent) {
+        if (isTestEvent || notTest) {
             await removeEventFromCalendar(event.id);
             // await sleep(1000);
         }

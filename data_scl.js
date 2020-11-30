@@ -94,13 +94,8 @@ days[1] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [13, 40],
+            startTime: [12, 50],
             timeLast: 40,
-        }),
-        new Lesson({
-            subject: subjects["M1"],
-            startTime: [14, 30],
-            timeLast: 100,
         }),
     ],
 });
@@ -136,6 +131,11 @@ days[2] = new Day({
             subject: subjects["CHI"],
             startTime: [12, 10],
             timeLast: 40,
+        }),
+        new Lesson({
+            subject: subjects["CHI"],
+            startTime: [15, 30],
+            timeLast: 120,
         }),
     ],
 });
@@ -174,13 +174,8 @@ days[3] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [13, 40],
+            startTime: [12, 50],
             timeLast: 40,
-        }),
-        new Lesson({
-            subject: subjects["M1"],
-            startTime: [14, 30],
-            timeLast: 100,
         }),
     ],
 });
@@ -216,6 +211,11 @@ days[4] = new Day({
             subject: subjects["CHEM"],
             startTime: [12, 10],
             timeLast: 40,
+        }),
+        new Lesson({
+            subject: subjects["CHEM"],
+            startTime: [15, 30],
+            timeLast: 120,
         }),
     ],
 });
@@ -253,14 +253,9 @@ days[5] = new Day({
             timeLast: 40,
         }),
         new Lesson({
-            subject: subjects["LS"],
-            startTime: [13, 40],
-            timeLast: 40,
-        }),
-        new Lesson({
-            subject: subjects["LS"],
-            startTime: [14, 30],
-            timeLast: 100,
+            subject: subjects["MAT"],
+            startTime: [15, 30],
+            timeLast: 120,
         }),
     ],
 });
@@ -299,13 +294,8 @@ days[6] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [13, 40],
+            startTime: [12, 50],
             timeLast: 40,
-        }),
-        new Lesson({
-            subject: subjects["M1"],
-            startTime: [14, 30],
-            timeLast: 100,
         }),
     ],
 });
@@ -341,6 +331,11 @@ days[7] = new Day({
             subject: subjects["LS"],
             startTime: [12, 10],
             timeLast: 40,
+        }),
+        new Lesson({
+            subject: subjects["ICT"],
+            startTime: [15, 30],
+            timeLast: 120,
         }),
     ],
 });
@@ -379,13 +374,8 @@ days[8] = new Day({
         }),
         new Lesson({
             subject: subjects["M1"],
-            startTime: [13, 40],
+            startTime: [12, 50],
             timeLast: 40,
-        }),
-        new Lesson({
-            subject: subjects["M1"],
-            startTime: [14, 30],
-            timeLast: 100,
         }),
     ],
 });
@@ -422,6 +412,11 @@ days[9] = new Day({
             startTime: [12, 10],
             timeLast: 40,
         }),
+        new Lesson({
+            subject: subjects["PHY"],
+            startTime: [15, 30],
+            timeLast: 120,
+        }),
     ],
 });
 days[10] = new Day({
@@ -457,6 +452,11 @@ days[10] = new Day({
             startTime: [12, 10],
             timeLast: 40,
         }),
+        new Lesson({
+            subject: subjects["LS"],
+            startTime: [15, 30],
+            timeLast: 120,
+        }),
     ],
 });
 
@@ -485,46 +485,8 @@ const dateDayMap = {
     // "2020-10-07": 2,
     // "2020-10-08": 3,
     // "2020-10-09": 4,
-    // "2020-10-12": 5,
+    "2020-10-12": 5,
     // "2020-10-13": 6,
     // "2020-10-14": 7,
     // "2020-10-15": 8,
-    // "2020-10-29": 7,
-    // "2020-10-30": 8,
-    // "2020-11-02": 9,
-    // "2020-11-03": 10,
-    // "2020-11-04": 1,
-    // "2020-11-05": 2,
-    // "2020-11-06": 3,
-    "2020-11-09": 4,
-    "2020-11-10": 5,
-    "2020-11-11": 6,
-    "2020-11-12": 7,
-    "2020-11-13": 8,
-    "2020-11-16": 9,
-    "2020-11-17": 10,
-    "2020-11-18": 1,
-    "2020-11-19": 2,
-    "2020-11-20": 3,
-    "2020-11-23": 4,
-    "2020-11-24": 5,
-    "2020-11-25": 6,
-    "2020-11-26": 7,
-    "2020-11-27": 8,
-    "2020-12-01": 9,
-    "2020-12-02": 10,
-    "2020-12-03": 1,
-    "2020-12-04": 2,
-    "2020-12-07": 3,
-    "2020-12-08": 4,
-    "2020-12-09": 5,
-    "2020-12-10": 6,
-    "2020-12-11": 7,
-    "2020-12-14": 8,
-    "2020-12-15": 9,
-    "2020-12-16": 10,
-    "2020-12-17": 1,
-    "2020-12-18": 2,
-    "2020-12-21": 3,
-    "2020-12-22": 4,
 };
